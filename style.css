@@ -1,0 +1,167 @@
+```css
+/* style.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #283e51, #2a5298);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#app {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Telas/Section controls */
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.screen.hidden {
+  display: none;
+}
+
+/* Botões */
+button, input[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #357abd;
+}
+
+/* Formulários */
+form {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+input[type="text"],
+select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1.5px solid #4a90e2;
+  background: #1e2b44;
+  color: #f0f0f0;
+  transition: border-color 0.25s ease-in-out;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #7ec8ff;
+  outline: none;
+}
+
+/* Rodapé */
+footer#footer {
+  background-color: #1c2833;
+  padding: 1rem 1.5rem;
+  color: #bbb;
+  text-align: center;
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+footer#footer section {
+  margin-bottom: 1rem;
+}
+
+/* Créditos */
+#credits h3,
+#social-media h3,
+#license h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #7ec8ff;
+}
+
+/* Redes sociais */
+#social-media ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 0;
+}
+
+#social-media ul li a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#social-media ul li a:hover,
+#social-media ul li a:focus {
+  color: #a3cdfd;
+  outline: none;
+}
+
+/* Títulos */
+h1, h2 {
+  color: #a3cdfd;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Responsividade */
+@media screen and (max-width: 480px) {
+  #app {
+    padding: 0.5rem 1rem;
+  }
+  button, input[type="submit"] {
+    width: 100%;
+    font-size: 1rem;
+  }
+  form {
+    max-width: 100%;
+  }
+}
+```
