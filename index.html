@@ -1,0 +1,111 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Block Soldiers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Tela Inicial / Boas-vindas -->
+    <section id="welcome-screen" class="screen active">
+      <h1>Bem-vindo ao <strong>Block Soldiers</strong></h1>
+      <p>
+        Prepare-se para construir seu campeão, desafiar torneios épicos e revelar sua própria jornada de superação.
+        Quem você será neste universo de blocos e batalhas?
+      </p>
+      <button id="start-btn">Começar</button>
+    </section>
+
+    <!-- Tela de Criação de Personagem -->
+    <section id="character-creation" class="screen hidden">
+      <h2>Crie seu personagem</h2>
+
+      <form id="char-form">
+        <label for="player-name">Nome do Personagem:</label>
+        <input type="text" id="player-name" name="player-name" required maxlength="20" placeholder="Digite seu nome..."/>
+
+        <label for="gender">Gênero:</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="nao-binario">Não-Binário</option>
+          <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+        </select>
+
+        <label for="motivation">Motivação:</label>
+        <select id="motivation" name="motivation" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="reconhecimento_vila">Buscar reconhecimento na vila natal</option>
+          <option value="provar">Provar ser mais do que aparenta</option>
+          <option value="peca_perdida">Encontrar uma peça perdida do passado</option>
+          <option value="tornar_lenda">Tornar-se uma lenda do torneio</option>
+          <option value="inspirar">Inspirar amigos e familiares</option>
+          <option value="defender_causa">Defender uma causa importante</option>
+        </select>
+
+        <label for="background">Passado:</label>
+        <select id="background" name="background" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="sobrevivente_torneio">Sobrevivente de um torneio antigo com memórias fragmentadas</option>
+          <option value="ex_aliado_lider">Ex-aliado de um dos atuais líderes de torneio</option>
+          <option value="filho_legendario">Filho(a) de um lendário campeão desconhecido</option>
+          <option value="crianca_sonhadora">Criança sonhadora que sempre assistiu às batalhas pela cerca</option>
+          <option value="artesao_convertido">Artesão de blocos convertido em duelista por acaso</option>
+        </select>
+
+        <button type="submit" id="create-char-btn">Confirmar</button>
+      </form>
+    </section>
+
+    <!-- Tela Principal do Jogo (placeholder) -->
+    <section id="game-screen" class="screen hidden" aria-live="polite">
+      <!-- Aqui o jogo será renderizado/gerenciado via JS -->
+      <h2>Block Soldiers - Jogo Iniciado</h2>
+      <!-- Conteúdos dinâmicos no futuro -->
+      <div id="game-area"></div>
+    </section>
+
+    <!-- Créditos e Rede Sociais -->
+    <footer id="footer">
+      <section id="credits">
+        <h3>Desenvolvido por</h3>
+        <p>Equipe <strong>Euconcegojogar</strong></p>
+      </section>
+
+      <section id="social-media">
+        <h3>Siga-nos nas redes sociais</h3>
+        <ul>
+          <li><a href="https://youtube.com/euconcegojogar" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a></li>
+          <li><a href="https://facebook.com/euconcegojogar" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a></li>
+          <li><a href="https://instagram.com/euconcegojogar" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a></li>
+        </ul>
+      </section>
+
+      <section id="license">
+        <h3>Licença</h3>
+        <p>
+          Este projeto é livre de custos. Você pode reproduzir, modificar e compartilhar o Block Soldiers à vontade.
+          <br/>
+          <strong>É obrigatório atribuir os créditos completos à equipe “Euconcegojogar” em qualquer uso ou redistribuição, especialmente em situações de divulgação pública, distribuição comercial ou uso para obtenção de ganhos pessoais.</strong>
+        </p>
+      </section>
+    </footer>
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="narrador.js"></script>
+  <script src="data/personagens.js"></script>
+  <script src="data/torneios.js"></script>
+  <script src="data/itens.js"></script>
+  <script src="arvore_habilidades.js"></script>
+  <script src="storage.js"></script>
+  <script src="ui.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+```
